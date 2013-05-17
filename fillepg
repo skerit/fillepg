@@ -1,0 +1,9 @@
+mkdir /tmp/xmltv/
+mc2xml -c be -g 1000 -o /tmp/xmltv/be.xml -D /opt/mc2xml/be.dat
+mc2xml -c nl -g 1000 -o /tmp/xmltv/nl.xml -D /opt/mc2xml/nl.dat
+mc2xml -c gb -g "E98 1NW" -o /tmp/xmltv/gb.xml -D /opt/mc2xml/gb.dat
+mc2xml -c gb -g "SW1X 7LA" -o /tmp/xmltv/scifi.xml -D /opt/mc2xml/scifi2.dat
+
+#/media/dimidium/epg/convert-xml.js
+
+#sed -ie 's/+0100"/+0000"/g' /tmp/gb.xml
