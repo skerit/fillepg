@@ -1,4 +1,4 @@
-#!/usr/bin/env nodejs
+#!/usr/bin/env node
 var bw         = require('buffered-writer');
 var XmlStream  = require('xml-stream');
 var path       = require('path');
@@ -46,7 +46,13 @@ function escapeHtml(unsafe) {
 // Write the first few lines
 target.write('<?xml version="1.0" encoding="ISO-8859-1"?>\n\
 <!DOCTYPE tv SYSTEM "xmltv.dtd">\n\
-<tv>\n');
+\n\
+<tv source-info-name="BDS" generator-info-name="mc2xml" generator-info-url="mailto:mc2xml@gmail.com">\n');
+
+
+//<?xml version="1.0" encoding="ISO-8859-1"?>\n\
+//<!DOCTYPE tv SYSTEM "xmltv.dtd">\n\
+//<tv source-info-name="BDS">\n');
 
 target.on('error', function (error){
   console.log (error);

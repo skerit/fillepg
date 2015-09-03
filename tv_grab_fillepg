@@ -4,7 +4,7 @@ vflag=
 cflag=
 if (( $# < 1 ))
 then
-  fillepg
+  /media/kingston/epg/fillepg > /dev/null 2>&1
   cat "/tmp/bigtv.xml"
   exit 0
 fi
